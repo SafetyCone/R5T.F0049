@@ -68,7 +68,7 @@ namespace R5T.F0049
 			string projectDescription)
 		{
 			// Check that solution file exists.
-			var solutionFileExists = Instances.FileSystemOperator.FileExists(solutionFilePath);
+			var solutionFileExists = Instances.FileSystemOperator.Exists_File(solutionFilePath);
 			if (!solutionFileExists)
 			{
 				throw new Exception($"Solution file does not exist.{Environment.NewLine}\t{solutionFilePath}");
@@ -88,7 +88,7 @@ namespace R5T.F0049
 				projectFileName);
 
 			// Check that project file does not already exist.
-			var projectFileExists = Instances.FileSystemOperator.FileExists(projectFilePath);
+			var projectFileExists = Instances.FileSystemOperator.Exists_File(projectFilePath);
 			if (projectFileExists)
 			{
 				throw new Exception($"Project file already exists.{Environment.NewLine}\t{projectFilePath}");
@@ -117,7 +117,7 @@ namespace R5T.F0049
 			string projectDescription)
 		{
 			// Check that solution file exists.
-			var solutionFileExists = Instances.FileSystemOperator.FileExists(solutionFilePath);
+			var solutionFileExists = Instances.FileSystemOperator.Exists_File(solutionFilePath);
 			if (!solutionFileExists)
 			{
 				throw new Exception($"Solution file does not exist.{Environment.NewLine}\t{solutionFilePath}");
@@ -137,7 +137,7 @@ namespace R5T.F0049
 				projectFileName);
 
 			// Check that project file does not already exist.
-			var projectFileExists = Instances.FileSystemOperator.FileExists(projectFilePath);
+			var projectFileExists = Instances.FileSystemOperator.Exists_File(projectFilePath);
 			if (projectFileExists)
 			{
 				throw new Exception($"Project file already exists.{Environment.NewLine}\t{projectFilePath}");
