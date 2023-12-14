@@ -97,7 +97,7 @@ namespace R5T.F0049
 			var namespaceName = Instances.ProjectNamespacesOperator.GetDefaultNamespaceName_FromProjectName(projectName);
 
 			// Ensure the project directory exists.
-			Instances.FileSystemOperator.CreateDirectory_OkIfAlreadyExists(projectDirectoryPath);
+			Instances.FileSystemOperator.Create_Directory_OkIfAlreadyExists(projectDirectoryPath);
 
 			// Create the project file.
 			Instances.ProjectFileGenerator.CreateNewLibrary(projectFilePath);
@@ -146,7 +146,7 @@ namespace R5T.F0049
 			var namespaceName = Instances.ProjectNamespacesOperator.GetDefaultNamespaceName_FromProjectName(projectName);
 
 			// Ensure the project directory exists.
-			Instances.FileSystemOperator.CreateDirectory_OkIfAlreadyExists(projectDirectoryPath);
+			Instances.FileSystemOperator.Create_Directory_OkIfAlreadyExists(projectDirectoryPath);
 
 			// Create the project file.
 			Instances.ProjectFileGenerator.CreateNewConsole(projectFilePath);
