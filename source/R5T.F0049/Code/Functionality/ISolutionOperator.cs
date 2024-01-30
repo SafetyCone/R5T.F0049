@@ -15,7 +15,7 @@ namespace R5T.F0049
 			string solutionName,
 			ILogger logger)
 		{
-			var solutionDirectoryPath = Instances.SolutionPathsOperator.GetSolutionDirectoryPath_FromRepositorySourceDirectoryPath(sourceDirectoryPath);
+			var solutionDirectoryPath = Instances.SolutionPathsOperator.Get_SolutionDirectoryPath_FromRepositorySourceDirectoryPath(sourceDirectoryPath);
 
 			var solutionFilePath = this.Create_Solution_SolutionDirectoryPath(
 				solutionDirectoryPath,
@@ -30,7 +30,7 @@ namespace R5T.F0049
 			string solutionName,
 			ILogger logger)
 		{
-			var solutionFilePath = Instances.SolutionPathsOperator.GetSolutionFilePath(
+			var solutionFilePath = Instances.SolutionPathsOperator.Get_SolutionFilePath(
 				solutionDirectoryPath,
 				solutionName);
 
@@ -75,15 +75,15 @@ namespace R5T.F0049
 			}
 
 			// Get project file path.
-			var solutionDirectoryPath = Instances.PathOperator.GetParentDirectoryPath_ForFile(solutionFilePath);
+			var solutionDirectoryPath = Instances.PathOperator.Get_ParentDirectoryPath_ForFile(solutionFilePath);
 
 			var projectDirectoryName = Instances.ProjectDirectoryNameOperator.GetProjectDirectoryName_FromProjectName(projectName);
-			var projectDirectoryPath = Instances.PathOperator.GetDirectoryPath(
+			var projectDirectoryPath = Instances.PathOperator.Get_DirectoryPath(
 				solutionDirectoryPath,
 				projectDirectoryName);
 
 			var projectFileName = Instances.ProjectFileNameOperator.GetProjectFileName_FromProjectName(projectName);
-			var projectFilePath = Instances.PathOperator.GetFilePath(
+			var projectFilePath = Instances.PathOperator.Get_FilePath(
 				projectDirectoryPath,
 				projectFileName);
 
@@ -124,15 +124,15 @@ namespace R5T.F0049
 			}
 
 			// Get project file path.
-			var solutionDirectoryPath = Instances.PathOperator.GetParentDirectoryPath_ForFile(solutionFilePath);
+			var solutionDirectoryPath = Instances.PathOperator.Get_ParentDirectoryPath_ForFile(solutionFilePath);
 
 			var projectDirectoryName = Instances.ProjectDirectoryNameOperator.GetProjectDirectoryName_FromProjectName(projectName);
-			var projectDirectoryPath = Instances.PathOperator.GetDirectoryPath(
+			var projectDirectoryPath = Instances.PathOperator.Get_DirectoryPath(
 				solutionDirectoryPath,
 				projectDirectoryName);
 
 			var projectFileName = Instances.ProjectFileNameOperator.GetProjectFileName_FromProjectName(projectName);
-			var projectFilePath = Instances.PathOperator.GetFilePath(
+			var projectFilePath = Instances.PathOperator.Get_FilePath(
 				projectDirectoryPath,
 				projectFileName);
 
