@@ -36,7 +36,7 @@ namespace R5T.F0049
 
 			logger.LogInformation($"Creating solution file...{Environment.NewLine}\t{solutionFilePath}");
 
-			Instances.SolutionFileGenerator.CreateNew(solutionFilePath);
+			Instances.SolutionFileGenerator.New_Synchronous(solutionFilePath);
 
 			logger.LogInformation($"Created script solution file.{Environment.NewLine}\t{solutionFilePath}");
 
@@ -82,7 +82,7 @@ namespace R5T.F0049
 				solutionDirectoryPath,
 				projectDirectoryName);
 
-			var projectFileName = Instances.ProjectFileNameOperator.GetProjectFileName_FromProjectName(projectName);
+			var projectFileName = Instances.ProjectFileNameOperator.Get_ProjectFileName_FromProjectName(projectName);
 			var projectFilePath = Instances.PathOperator.Get_FilePath(
 				projectDirectoryPath,
 				projectFileName);
@@ -94,7 +94,7 @@ namespace R5T.F0049
 				throw new Exception($"Project file already exists.{Environment.NewLine}\t{projectFilePath}");
 			}
 
-			var namespaceName = Instances.ProjectNamespacesOperator.GetDefaultNamespaceName_FromProjectName(projectName);
+			var namespaceName = Instances.ProjectNamespacesOperator.Get_DefaultNamespaceName_FromProjectName(projectName);
 
 			// Ensure the project directory exists.
 			Instances.FileSystemOperator.Create_Directory_OkIfAlreadyExists(projectDirectoryPath);
@@ -131,7 +131,7 @@ namespace R5T.F0049
 				solutionDirectoryPath,
 				projectDirectoryName);
 
-			var projectFileName = Instances.ProjectFileNameOperator.GetProjectFileName_FromProjectName(projectName);
+			var projectFileName = Instances.ProjectFileNameOperator.Get_ProjectFileName_FromProjectName(projectName);
 			var projectFilePath = Instances.PathOperator.Get_FilePath(
 				projectDirectoryPath,
 				projectFileName);
@@ -143,7 +143,7 @@ namespace R5T.F0049
 				throw new Exception($"Project file already exists.{Environment.NewLine}\t{projectFilePath}");
 			}
 
-			var namespaceName = Instances.ProjectNamespacesOperator.GetDefaultNamespaceName_FromProjectName(projectName);
+			var namespaceName = Instances.ProjectNamespacesOperator.Get_DefaultNamespaceName_FromProjectName(projectName);
 
 			// Ensure the project directory exists.
 			Instances.FileSystemOperator.Create_Directory_OkIfAlreadyExists(projectDirectoryPath);
