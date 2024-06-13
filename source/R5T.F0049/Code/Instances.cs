@@ -5,7 +5,7 @@ namespace R5T.F0049
 {
     public static class Instances
     {
-        public static F0000.IFileSystemOperator FileSystemOperator => F0000.FileSystemOperator.Instance;
+        public static L0066.IFileSystemOperator FileSystemOperator => L0066.FileSystemOperator.Instance;
         public static L0066.IPathOperator PathOperator => L0066.PathOperator.Instance;
         public static F0052.IProjectDirectoryNameOperator ProjectDirectoryNameOperator => F0052.ProjectDirectoryNameOperator.Instance;
         public static F0052.IProjectFileNameOperator ProjectFileNameOperator => F0052.ProjectFileNameOperator.Instance;
